@@ -32,6 +32,9 @@ let enum_b: string = Color[1]
 console.log(enum_a, enum_b)
 console.dir(Color)
 
+enum Word {'en', 'cn','贵','%￥'}
+let eWord : Word = Word["%￥"]
+
 // any 任意类型
 let any_a: any = 1
 any_a.toFixed(2)

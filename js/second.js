@@ -1,5 +1,5 @@
 "use strict";
-// 接口
+// 接口 设定变量集合的规则
 var __spreadArray = (this && this.__spreadArray) || function (to, from) {
     for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
         to[j] = from[i];
@@ -24,10 +24,10 @@ function createSquare(config) {
 var mySquare = createSquare({ color: '#ff0', width: 23 });
 console.log(mySquare);
 var p1 = { x: 20, y: 1 };
-//  p1.x = 2 此处Error 只读属性不可被更改 
+//  p1.x = 2 //此处Error 只读属性不可被更改 
 console.log(p1);
 var a = [1, 2, 3];
-var ra = a;
+var ra = a.map(function (i) { return ++i; });
 console.log(ra[0]);
 a = __spreadArray([], ra);
 console.log(a);
@@ -38,6 +38,10 @@ console.log(a);
 a = JSON.parse(JSON.stringify(ra));
 console.log(a);
 // 额外属性检查绕开方式
+var mySquare1 = createSquare({ colour: 'red', width: 34 });
+var mySquare2 = createSquare({ colour: 'red' });
+var mySquare3 = createSquare({});
+console.log(mySquare1, mySquare2, mySquare3);
 // 断言式
 var mySquares = createSquare({ colour: 'blue', width: 20 });
 // 转赋值

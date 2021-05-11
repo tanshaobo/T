@@ -1,4 +1,4 @@
-// 接口
+// 接口 设定变量集合的规则
 
 // function printLabel(labelledObj: { label: string }) {
 //     console.log(labelledObj.label)
@@ -6,7 +6,7 @@
 // let myObj = {size:1,label:'helloworld'}
 // printLabel(myObj)
 
-// 接口必须包含label
+// 接口 必须包含label
 interface labelledObj {
     label: string;
 }
@@ -18,7 +18,7 @@ let myObjs = {size: 1,name:'str'}
 printLabel(myObj)
 // printLabel(myObjs) // 此处因缺少label选项报错
 
-// 可选属性
+// 可选属性 ?
 interface SquareConfig{
     color?: string;
     width?: number;
@@ -38,6 +38,7 @@ function createSquare(config:SquareConfig):{color:string,area:number} {
 let mySquare = createSquare({color:'#ff0',width:23})
 console.log(mySquare)
 
+
 // 只读属性
 interface Point{
     readonly x: number;
@@ -45,11 +46,11 @@ interface Point{
 }
 
 let p1: Point = {x : 20, y:1}
-//  p1.x = 2 此处Error 只读属性不可被更改 
+//  p1.x = 2 //此处Error 只读属性不可被更改 
 console.log(p1)
 
 let  a : number[] = [1,2,3]
-let ra: ReadonlyArray<number> = a
+let ra: ReadonlyArray<number> = a.map(i => ++i)
 console.log(ra[0])
 a = [...ra]
 console.log(a)
@@ -61,6 +62,10 @@ a =JSON.parse(JSON.stringify(ra))
 console.log(a)
 
 // 额外属性检查绕开方式
+let mySquare1 = createSquare({colour:'red',width: 34})
+let mySquare2 = createSquare({colour:'red'})
+let mySquare3 = createSquare({})
+console.log(mySquare1,mySquare2,mySquare3)
 // 断言式
 let mySquares = createSquare({colour:'blue',width:20} as SquareConfig)
 // 转赋值

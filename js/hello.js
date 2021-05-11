@@ -38,6 +38,14 @@ var enum_a = Color.Green;
 var enum_b = Color[1];
 console.log(enum_a, enum_b);
 console.dir(Color);
+var Word;
+(function (Word) {
+    Word[Word["en"] = 0] = "en";
+    Word[Word["cn"] = 1] = "cn";
+    Word[Word["\u8D35"] = 2] = "\u8D35";
+    Word[Word["%\uFFE5"] = 3] = "%\uFFE5";
+})(Word || (Word = {}));
+var eWord = Word["%￥"];
 // any 任意类型
 var any_a = 1;
 any_a.toFixed(2);
