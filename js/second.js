@@ -1,9 +1,13 @@
 "use strict";
 // 接口 设定变量集合的规则
-var __spreadArray = (this && this.__spreadArray) || function (to, from) {
-    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
-    return to;
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
 };
 function printLabel(labelledObj) {
     console.log(labelledObj.label);
@@ -29,7 +33,7 @@ console.log(p1);
 var a = [1, 2, 3];
 var ra = a.map(function (i) { return ++i; });
 console.log(ra[0]);
-a = __spreadArray([], ra);
+a = __spreadArray([], ra, true);
 console.log(a);
 a = ra;
 console.log(a);

@@ -4,6 +4,7 @@
  */
 var b1 = true;
 var b2 = false;
+var b3 = true;
 /**
  * 数字类型 number
  */

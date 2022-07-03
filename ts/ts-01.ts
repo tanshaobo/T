@@ -6,6 +6,7 @@ let b1:boolean = true
 
 let b2:boolean = false
 
+let b3:boolean = true
 /**
  * 数字类型 number
  */

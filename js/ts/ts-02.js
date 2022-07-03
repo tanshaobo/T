@@ -12,14 +12,14 @@ var f3 = function () {
  * 传参,
  */
 var f4 = function (name, age) {
-    return "" + name + (age < 18 ? '未成年' : '成年了');
+    return "".concat(name).concat(age < 18 ? '未成年' : '成年了');
 };
 console.log(f4('张三', 2));
 /**
  * 可选参数 必须位于所有参数最后
  */
 var f5 = function (name, age) {
-    return "" + (name + (age ? name + age : name));
+    return "".concat(name + (age ? name + age : name));
 };
 console.log(f5('李四', 3), f5('王五'));
 /**

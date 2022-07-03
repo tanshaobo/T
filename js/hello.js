@@ -2,7 +2,7 @@
 // 基础类型 字符串
 var hello = 'hello';
 var age = 88;
-var sentence = hello + ",good night,\nI'll be " + (age + 1) + " years old next month";
+var sentence = "".concat(hello, ",good night,\nI'll be ").concat(age + 1, " years old next month");
 // 基础类型 数字
 var n = 1;
 var f_n = 1.2;
