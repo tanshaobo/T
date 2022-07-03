@@ -27,12 +27,15 @@ var a2 = [1, 'a', [2], false, null, NaN, undefined, function () { console.log(1)
 var a3 = ['a', 'hello', 'whosyourdaddy'];
 var a4 = [0 == 0, !1, false];
 /**
- * 元祖 tuple
+ * 元祖 tuple 指定数组中每个值的类型的数组
  */
 var t1 = [1, '1'];
 var t2 = [false, [1, 2, 2, 4]];
 /**
  * 枚举 enum
+ * 1、内部标识符默认输出为对应的索引
+ * 2、如果给某个标识符设定为某个整形常数，该标识符之前的输出为对应索引，该标识符之后为该整形常数一次顺延
+ * 3、枚举标识符可设定为字符串
  */
 var Flag;
 (function (Flag) {
