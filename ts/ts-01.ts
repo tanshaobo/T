@@ -43,7 +43,7 @@ let a3:Array<string> = ['a','hello','whosyourdaddy']
 let a4:Array<boolean> = [0==0,!1, false]
 
 /**
- * 元祖 tuple
+ * 元祖 tuple 指定数组中每个值的类型的数组
  */
 
 let t1:[number, string] = [1, '1']
