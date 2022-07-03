@@ -51,7 +51,7 @@ let t1:[number, string] = [1, '1']
 let t2:[boolean,number[]] = [false,[1,2,2,4]]
 
 /**
- * 枚举 enum
+ * 枚举 enum 标识符与整型常数对应
  */
 
 enum Flag {
