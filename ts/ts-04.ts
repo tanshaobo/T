@@ -51,4 +51,17 @@ let s = new subPerson('王五')
 
 console.log(s.getSex()) 
 
+// 静态属性 静态方法 类似jquery中 $.ajax, 实例方法类似 $(dom).height
 
+class supPerson extends person{
+  constructor(name:string){
+    super(name)
+  }
+  static attr:string = '这是静态属性'
+  static print():string{
+    return '这是静态方法'
+  }
+}
+
+console.log(supPerson.attr)
+console.log(supPerson.print())

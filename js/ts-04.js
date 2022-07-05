@@ -57,3 +57,17 @@ var subPerson = /** @class */ (function (_super) {
 }(person));
 var s = new subPerson('王五');
 console.log(s.getSex());
+// 静态属性 静态方法 类似jquery中 $.ajax, 实例方法类似 $(dom).height
+var supPerson = /** @class */ (function (_super) {
+    __extends(supPerson, _super);
+    function supPerson(name) {
+        return _super.call(this, name) || this;
+    }
+    supPerson.print = function () {
+        return '这是静态方法';
+    };
+    supPerson.attr = '这是静态属性';
+    return supPerson;
+}(person));
+console.log(supPerson.attr);
+console.log(supPerson.print());
