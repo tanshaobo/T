@@ -40,7 +40,9 @@ p.setName();
 console.log(p.name);
 // console.log(p.sex) 此处报错不可访问
 // console.log(p.age) 此处报错不可访问
-// 类继承
+/**
+ * 类继承
+ *  */
 var subPerson = /** @class */ (function (_super) {
     __extends(subPerson, _super);
     function subPerson(name) {
@@ -75,3 +77,39 @@ var supPerson = /** @class */ (function (_super) {
 }(person));
 console.log(supPerson.attr);
 console.log(supPerson.print());
+/**
+ * 多态  父类定义了方法 但是父类不去实现 由子类去实现不同方法
+ */
+var Animal = /** @class */ (function () {
+    function Animal(name) {
+        this.name = name;
+    }
+    Animal.prototype.eat = function () {
+        console.log('看看父类定义的方法有没有被执行');
+    };
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog(name) {
+        return _super.call(this, name) || this;
+    }
+    Dog.prototype.eat = function () {
+        return this.name + '吃骨头';
+    };
+    return Dog;
+}(Animal));
+var d = new Dog('旺财');
+console.log(d.eat());
+var Cat = /** @class */ (function (_super) {
+    __extends(Cat, _super);
+    function Cat(name) {
+        return _super.call(this, name) || this;
+    }
+    Cat.prototype.eat = function () {
+        return this.name + '吃骨头渣';
+    };
+    return Cat;
+}(Animal));
+var c = new Cat('来福');
+console.log(c.eat());

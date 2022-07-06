@@ -32,7 +32,9 @@ console.log(p.name)
 // console.log(p.sex) 此处报错不可访问
 // console.log(p.age) 此处报错不可访问
 
-// 类继承
+/**
+ * 类继承
+ *  */ 
 
 class subPerson extends person{
   constructor(name: string){
@@ -68,3 +70,41 @@ class supPerson extends person{
 
 console.log(supPerson.attr)
 console.log(supPerson.print())
+
+/**
+ * 多态  父类定义了方法 但是父类不去实现 由子类去实现不同方法
+ */
+
+class Animal {
+  name:string
+  constructor(name:string){
+    this.name = name
+  }
+
+  eat():void{
+    console.log('看看父类定义的方法有没有被执行')
+  }
+}
+
+class Dog extends Animal{
+  constructor(name:string){
+    super(name)
+  }
+  eat():string{
+    return this.name + '吃骨头'
+  }
+}
+
+let d = new Dog('旺财')
+
+console.log(d.eat())
+class Cat extends Animal{
+  constructor(name:string){
+    super(name)
+  }
+  eat():string{
+    return this.name + '吃骨头渣'
+  }
+}
+let c = new Cat('来福')
+console.log(c.eat())
