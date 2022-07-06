@@ -108,3 +108,40 @@ class Cat extends Animal{
 }
 let c = new Cat('来福')
 console.log(c.eat())
+
+/**
+ * 抽象类 抽象方法 
+ * 
+ * 抽象类是提供其他类继承的基类，不能直接被实例化，主要是用来提供标准
+ * 
+ * 用abstract关键字定义，抽象类中的抽象方法不包含具体实现 但该方法必须在派生类中实现
+ * 
+ * 抽象方法只能放在抽象类中
+ * 
+ */
+
+abstract class Base {
+  name: string
+  constructor(name:string){
+    this.name = name
+  }
+  abstract getName():any
+}
+
+class subBase extends Base{
+  constructor(name:string){
+    super(name)
+  }
+  getName() {
+      return this.name + 'subBase'
+  }
+}
+
+class supBase extends Base{
+  constructor(name:string){
+    super(name)
+  }
+  getName() {
+      return this.name + 'supBase'
+  }
+}

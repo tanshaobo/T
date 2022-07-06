@@ -113,3 +113,39 @@ var Cat = /** @class */ (function (_super) {
 }(Animal));
 var c = new Cat('来福');
 console.log(c.eat());
+/**
+ * 抽象类 抽象方法
+ *
+ * 抽象类是提供其他类继承的基类，不能直接被实例化，主要是用来提供标准
+ *
+ * 用abstract关键字定义，抽象类中的抽象方法不包含具体实现 但该方法必须在派生类中实现
+ *
+ * 抽象方法只能放在抽象类中
+ *
+ */
+var Base = /** @class */ (function () {
+    function Base(name) {
+        this.name = name;
+    }
+    return Base;
+}());
+var subBase = /** @class */ (function (_super) {
+    __extends(subBase, _super);
+    function subBase(name) {
+        return _super.call(this, name) || this;
+    }
+    subBase.prototype.getName = function () {
+        return this.name + 'subBase';
+    };
+    return subBase;
+}(Base));
+var supBase = /** @class */ (function (_super) {
+    __extends(supBase, _super);
+    function supBase(name) {
+        return _super.call(this, name) || this;
+    }
+    supBase.prototype.getName = function () {
+        return this.name + 'supBase';
+    };
+    return supBase;
+}(Base));
