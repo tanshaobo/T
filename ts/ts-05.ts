@@ -44,3 +44,38 @@ function printInfo(info: FullInfo):void{
 }
 
 printInfo(tempObj)
+
+interface request{
+  type: string
+  url: string
+  data?: string
+  dataType: string
+}
+
+function ajax(config:request){
+  var xhr = new XMLHttpRequest()
+
+  xhr.open(config.type,config.url, true)
+
+  xhr.send(config.data)
+
+  xhr.onreadystatechange = function():void{
+    if(xhr.readyState === 4 && xhr.status === 200){
+      console.log('success')
+
+      if(config.dataType == 'json'){
+        console.log(JSON.parse(xhr.responseText))
+      }else{
+        console.log(xhr.responseText)
+      }
+    }
+  }
+}
+
+let ajaxData = {
+  type: 'get',
+  url: 'http://a.itying.com/api/productlist',
+  dataType: 'json'
+}
+
+ajax(ajaxData)
