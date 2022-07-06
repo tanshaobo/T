@@ -61,9 +61,13 @@ console.log(s.getSex());
 var supPerson = /** @class */ (function (_super) {
     __extends(supPerson, _super);
     function supPerson(name) {
-        return _super.call(this, name) || this;
+        var _this = _super.call(this, name) || this;
+        _this.height = 165;
+        return _this;
     }
     supPerson.print = function () {
+        console.log(supPerson.attr); // 静态方法中调用静态属性与在外部一致，但无法调用实例属性和实例方法 
+        console.log(this);
         return '这是静态方法';
     };
     supPerson.attr = '这是静态属性';

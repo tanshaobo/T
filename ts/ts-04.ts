@@ -54,11 +54,14 @@ console.log(s.getSex())
 // 静态属性 静态方法 类似jquery中 $.ajax, 实例方法类似 $(dom).height
 
 class supPerson extends person{
+  public height:number = 165
   constructor(name:string){
     super(name)
   }
   static attr:string = '这是静态属性'
   static print():string{
+    console.log(supPerson.attr) // 静态方法中调用静态属性与在外部一致，但无法调用实例属性和实例方法 
+    console.log(this)
     return '这是静态方法'
   }
 }
