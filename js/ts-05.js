@@ -19,3 +19,7 @@ var tempObj = {
     age: 1
 };
 printName(tempObj);
+function printInfo(info) {
+    console.log('name是' + info.firstName + '--' + info.secondName + info.age);
+}
+printInfo(tempObj);

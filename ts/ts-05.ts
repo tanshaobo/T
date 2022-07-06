@@ -13,7 +13,7 @@
 /**
  * 属性接口
  * 
- * 对json的约束
+ * 对json的约束 约束对象中必须包含接口定义字段，字段之间顺序不受影响
  */
 
 interface FullName{
@@ -32,3 +32,15 @@ let tempObj = { // 对象中必须包含接口字段，允许有其他字段
 }
 
 printName(tempObj)
+
+interface FullInfo{ // 接口中可设置某个字段为可选字段 通过 ?
+  firstName: string
+  secondName: string
+  age?: number
+}
+
+function printInfo(info: FullInfo):void{
+  console.log('name是'+info.firstName + '--' + info.secondName + info.age)
+}
+
+printInfo(tempObj)
