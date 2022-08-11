@@ -144,7 +144,7 @@
 // m.run() 
 // m.work()
 
-// 8 原型链+构造函数 组合继承 避免构造函数内属性和方法重复继承
+// 8、 原型链+构造函数 组合继承 避免构造函数内属性和方法重复继承
 // function Person(name, age){
 //   this.name = name // 属性
 //   this.age = age
