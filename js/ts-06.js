@@ -4,3 +4,7 @@
  */
 var arrs = ['a', 's'];
 console.log(arrs);
+var objs = {
+    name: '张三'
+};
+console.log(objs);
