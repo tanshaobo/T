@@ -45,3 +45,7 @@ var ajaxData = {
     dataType: 'json'
 };
 ajax(ajaxData);
+var md5 = function (key, value) {
+    return "".concat(key).concat(value);
+};
+console.log(md5('name', '张三'));
