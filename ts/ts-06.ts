@@ -26,3 +26,21 @@ var objs:UseObj = {
 }
 
 console.log(objs)
+
+// 类类型接口 对类的约束 类似抽象类
+
+interface Animal{
+  name: string;
+  eat(str:string):void;
+}
+
+class Dogs implements Animal{
+  name:string
+  constructor(name:string){
+    this.name = name
+  }
+
+  eat(){
+    console.log(`${this.name}吃啥`)
+  }
+}
