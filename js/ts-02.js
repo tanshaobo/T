@@ -1,4 +1,12 @@
 "use strict";
+/*
+ * @Author: tanshaobo
+ * @Date: 2022-07-02 21:56:01
+ * @LastEditors: tanshaobo
+ * @LastEditTime: 2024-03-25 23:25:33
+ * @Description: ts中的函数
+ * @FilePath: \T\ts\ts-02.ts
+ */
 /**
  * 声明函数、匿名函数
  */
@@ -9,7 +17,7 @@ var f3 = function () {
     return 1;
 };
 /**
- * 传参,
+ * 传参
  */
 var f4 = function (name, age) {
     return "".concat(name).concat(age < 18 ? '未成年' : '成年了');

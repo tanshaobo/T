@@ -6,23 +6,23 @@ var sentence = "".concat(hello, ",good night,\nI'll be ").concat(age + 1, " year
 // 基础类型 数字
 var n = 1;
 var f_n = 1.2;
-var hex_n = 0xf00;
-var binary_n = 2;
-var octal_n = 55;
+var hex_n = 0xf00; // 十六进制
+var binary_n = 2; // 二进制
+var octal_n = 55; // 八进制
 // 基础类型  布尔值
 var b = false;
 // 引用类型 数组
 var list = [1, 2, 3];
 var lists = [4, 5, 6];
-var lista = [1, 'a', false, null, undefined, [1, 2], { a: 1 }, function () { console.log(1); }];
+var lisa = [1, 'a', false, null, undefined, [1, 2], { a: 1 }, function () { console.log(1); }];
 // 元祖 Tuple 指定长度以及每项类型的数组
-var listb;
-listb = ['feh', 1];
-console.log(listb[0].substr(1));
-console.log(listb[1].toFixed(1));
+var limb;
+limb = ['feh', 2];
+console.log(limb[0].substr(1));
+console.log(limb[1].toFixed(1));
 /**
  * 设置超出元祖长度的元素时，编辑器报错，此处与文档不符，但是该代码仍可被解析
- * listb[2]= 2
+ * limb[2]= 2
 */
 // 枚举 enum 
 var Color;
@@ -57,6 +57,11 @@ any_a = { a: 1 };
 delete any_a.a;
 // void 无类型
 var void_a = undefined;
+// 多个类型
+var multiple;
+multiple = 1;
+multiple = null;
+console.log(multiple);
 /**
  * 此处与文档不符，设置成null后会报类型检测错误
  * let void_b:void = null

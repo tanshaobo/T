@@ -7,23 +7,23 @@ I'll be ${age + 1} years old next month`
 // 基础类型 数字
 let n : number = 1
 let f_n: number = 1.2
-let hex_n: number = 0xf00
-let binary_n: number = 0b10
-let octal_n: number = 0o67
+let hex_n: number = 0xf00 // 十六进制
+let binary_n: number = 0b10 // 二进制
+let octal_n: number = 0o67 // 八进制
 // 基础类型  布尔值
 let b:boolean = false
 // 引用类型 数组
 let list: number[] = [1,2,3]
 let lists: Array<number> = [4,5,6]
-let lista: Array<any> = [1, 'a', false, null, undefined,[1,2],{a: 1},function(){console.log(1)}]
+let lisa: Array<any> = [1, 'a', false, null, undefined,[1,2],{a: 1},function(){console.log(1)}]
 // 元祖 Tuple 指定长度以及每项类型的数组
-let listb: [string,number]
-listb = ['feh', 1]
-console.log(listb[0].substr(1))
-console.log(listb[1].toFixed(1))
+let limb: [string, number]
+limb = ['feh', 2]
+console.log(limb[0].substr(1))
+console.log(limb[1].toFixed(1))
 /**
  * 设置超出元祖长度的元素时，编辑器报错，此处与文档不符，但是该代码仍可被解析
- * listb[2]= 2 
+ * limb[2]= 2 
 */
 // 枚举 enum 
 enum Color {Red = 1,Green = -1,Blue = Math.random(),Dark = Color.Red, Pink = 4 + 3,Black = parseInt('1.0')}
@@ -46,6 +46,12 @@ any_a = {a:1}
 delete any_a.a
 // void 无类型
 let void_a:void = undefined
+
+// 多个类型
+let multiple: number | null | undefined;
+multiple = 1
+multiple = null
+console.log(multiple)
 /**
  * 此处与文档不符，设置成null后会报类型检测错误
  * let void_b:void = null

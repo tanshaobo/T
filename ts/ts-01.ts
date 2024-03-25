@@ -1,3 +1,11 @@
+/*
+ * @Author: tanshaobo
+ * @Date: 2022-07-02 21:56:01
+ * @LastEditors: tanshaobo
+ * @LastEditTime: 2024-03-25 23:26:26
+ * @Description: ts中的数据类型
+ * @FilePath: \T\ts\ts-01.ts
+ */
 /**
  *  布尔类型  boolean
  */

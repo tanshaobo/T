@@ -1,3 +1,11 @@
+/*
+ * @Author: tanshaobo
+ * @Date: 2022-07-02 21:56:01
+ * @LastEditors: tanshaobo
+ * @LastEditTime: 2024-03-25 23:25:33
+ * @Description: ts中的函数
+ * @FilePath: \T\ts\ts-02.ts
+ */
 /**
  * 声明函数、匿名函数
  */
@@ -11,7 +19,7 @@ const f3 = ():number => {
 }
 
 /**
- * 传参, 
+ * 传参
  */
 
 const f4 = (name:string, age: number):string => {
@@ -49,7 +57,7 @@ const f7 = (...result:number[]):number => result.reduce((i,j) => i += j , result
 console.log(f7(1,2,3,5,6,7,8))
 
 /**
- * 重载
+ * 重载 函数同名，参数类型不同 
  */
 
 function f8(name:string):string
